@@ -12,7 +12,8 @@ app.use(cors());
 
 // Connect to MongoDB
 mongoose
-  .connect(process.env.MONGO_URI || "mongodb://127.0.0.1:27017/pastebin")
+  
+  .connect(process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/pastebin")
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.error("❌ MongoDB connection error:", err));
 
